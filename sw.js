@@ -1,5 +1,5 @@
-const CACHE='emotion-atlas-313d054829b7';
-const FILES=["./","./index.html","./icon.svg","./manifest.webmanifest","./assets/esm-BdEomh6C.js","./assets/index-CnBHANqK.js","./assets/index-DRdBIfjr.css","./assets/web-BpZXZxH3.js","./assets/web-BYnEKaPw.js","./assets/web-DHIAOOAY.js"];
+const CACHE='emotion-atlas-928c314a4b02';
+const FILES=["./","./index.html","./icon.svg","./manifest.webmanifest","./assets/esm-DL8mkxyE.js","./assets/index-Aw5_PVZl.js","./assets/index-CnHNBZ0d.css","./assets/web-BgMt4ain.js","./assets/web-BZVkgmzZ.js","./assets/web-W6L9ap2p.js"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data?.type==='ACTIVATE_UPDATE')self.skipWaiting();});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('emotion-atlas-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
